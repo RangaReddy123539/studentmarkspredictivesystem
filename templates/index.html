@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Performance Prediction System</h1>
+    <p class="subtitle">Predict student's final performance using academic and personal information</p>
+
+    <form id="predictionForm">
+
+        <div class="form-grid">
+
+            <div>
+                <label>Age</label>
+                <input type="number" id="age" value="17" min="15" max="25" required>
+            </div>
+
+            <div>
+                <label>Gender</label>
+                <select id="sex">
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Study Time</label>
+                <select id="studytime">
+                    <option value="1">Less than 2 hours/week</option>
+                    <option value="2">2–5 hours/week</option>
+                    <option value="3">5–10 hours/week</option>
+                    <option value="4">More than 10 hours/week</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Past Failures</label>
+                <input type="number" id="failures" value="0" min="0" max="4">
+            </div>
+
+            <div>
+                <label>Absences</label>
+                <input type="number" id="absences" value="5" min="0">
+            </div>
+
+            <div>
+                <label>Mother's Education</label>
+                <select id="Medu">
+                    <option value="0">None</option>
+                    <option value="1">Primary Education</option>
+                    <option value="2">5th–9th Grade</option>
+                    <option value="3">Secondary Education</option>
+                    <option value="4">Higher Education</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Father's Education</label>
+                <select id="Fedu">
+                    <option value="0">None</option>
+                    <option value="1">Primary Education</option>
+                    <option value="2">5th–9th Grade</option>
+                    <option value="3">Secondary Education</option>
+                    <option value="4">Higher Education</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Going Out</label>
+                <select id="goout">
+                    <option value="1">Very Low</option>
+                    <option value="2">Low</option>
+                    <option value="3" selected>Average</option>
+                    <option value="4">High</option>
+                    <option value="5">Very High</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Health</label>
+                <select id="health">
+                    <option value="1">Very Good</option>
+                    <option value="2">Good</option>
+                    <option value="3">Average</option>
+                    <option value="4">Poor</option>
+                    <option value="5">Very Poor</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Internet Access</label>
+                <select id="internet">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label>First Period Grade (G1)</label>
+                <input type="number" id="G1" value="12" min="0" max="20" required>
+            </div>
+
+            <div>
+                <label>Second Period Grade (G2)</label>
+                <input type="number" id="G2" value="13" min="0" max="20" required>
+            </div>
+
+        </div>
+
+        <button type="submit">Predict Performance</button>
+
+    </form>
+
+    <div id="result" class="result">
+        <h2>Prediction Result</h2>
+
+        <div class="result-grid">
+
+            <div class="card">
+                <h3>Predicted Grade</h3>
+                <p id="grade">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Performance</h3>
+                <p id="performance">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Risk Level</h3>
+                <p id="risk">--</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
